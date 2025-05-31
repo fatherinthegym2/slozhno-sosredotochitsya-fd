@@ -212,6 +212,10 @@
   border: 1px solid var(--hover-color);
 }
 
+.main_article-text a:focus-visible{
+  border: 1px solid var(--hover-color);
+}
+
 .main_article_what {
   display: grid;
   gap: 20px;
