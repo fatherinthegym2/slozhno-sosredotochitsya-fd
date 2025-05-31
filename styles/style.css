@@ -198,8 +198,6 @@
   color: var(--card_text-color)
 }
 
-
-
 .main_article-text a{
   text-decoration: none;
   text-shadow: 2px 1px 0 var(--title-shadow-color);
