@@ -2,4 +2,449 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: 'IBM Plex Mono', 'sans-serif';
+  height: 100%;
+  width: 100%;
+  max-width: 1024px;
+  background-color: var(--page_background-color);
+  background-image: var(--bg-picture);
+  object-fit: contain;
+  background-repeat: no-repeat;
+}
+
+.header{
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  block-size: 100vh;
+  min-height: 668px;
+}
+
+.decorated-zone::before {
+  top: 10px;
+  right: 10px;
+  border-top: 1px solid var(--edge-color);
+  border-right: 1px solid var(--edge-color);
+}
+
+.decorated-zone::after {
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid var(--edge-color);
+  border-left: 1px solid var(--edge-color);
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+}
+
+.record_tag {
+  display: var(--rec-thumbler);
+  position: absolute;
+  color: var(--accent-color); 
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  top: 10px;
+  right: 39px;
+
+}
+
+.record_tag::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: -20px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+  margin-inline-end: 10px;
+  margin-block-start: 7px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.header__theme-menu-item {
+  font-size: var(--font_text-size);
+  font-weight: var(--font_text-small-weight);
+  line-height: 18%;
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.header__theme-menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'IBM Plex Mono', sans-serif;
+  min-width: 70px;
+  height: 26px;
+  background-color: inherit;
+  border: 1px solid transparent;
+  text-transform: lowercase;
+
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--border-color);
+  pointer-events: none;
+}
+
+.header_title {
+  justify-self: flex-start;
+  margin-inline-start: 10px;
+  text-shadow: 4px 4px 0 var(--title-shadow-color);
+}
+
+.title_style {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 83%;
+  color: var(--title-color);
+}
+
+.header_content {
+  justify-self: end;
+  align-self: center;
+  background-color: var(--article-background-color);
+  color: var(--article-text-color);
+  font-weight: var(--font_text-high-weight);
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+  margin-block-end: 10px;
+
+}
+
+.general-text-settings{
+  font-size: var(--font_text-size);
+  line-height: var(--font_text-line-height);
+  letter-spacing: var(--text_letter-spacing);
+}
+
+.main {
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+  margin-block-start: 40px;
+  margin-block-end: 40px;
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  gap: 50px;
+}
+
+.main_article_why {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1;
+  gap: 20px;
+}
+
+.main_title {
+  color: var(--card_title-color);
+  font-weight: var(--font_text-high-weight);
+}
+
+.container-for-article {
+  display: grid;
+  gap: 20px;
+}
+
+.main_article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+/*.main_article-side-title {
+  font-weight: var(--font_text-high-weight);
+  background-color: var(--main_background-article-title);
+  color: var(--main_article-title-color);
+}*/
+
+.main_article-title {
+  background-color: var(--main_background-article-title);
+  color: var(--main_article-title-color);
+  font-weight: var(--font_text-high-weight);
+
+}
+
+.main_alternative-article-title {
+  background-color: var(--card_background-article-title);
+  color: var(--card_article-title-color);
+  font-weight: var(--font_text-small-weight);
+}
+
+.main_article-text {
+  font-weight: var(--font_text-small-weight);
+  color: var(--card_text-color)
+}
+
+
+
+.main_article-text a{
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--title-shadow-color);
+}
+
+.main_article-text a:hover{
+  text-decoration: underline;
+}
+
+.main_article-text a:focus{
+  outline: none;
+  border: 1px solid var(--hover-color);
+}
+
+.main_article_what {
+  display: grid;
+  gap: 20px;
+
+}
+
+.main_article_how {
+  display: grid;
+  gap: 20px;
+}
+
+.main_article-gallery {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 668px;
+  height: 100vh;
+  text-shadow: 2px 2px 0 var(--title-shadow-color);
+}
+
+
+.dec-zone::before,
+.dec-zone::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.dec-zone::before {
+  top: 10px;
+  right: 10px;
+  border-top: 1px solid var(--edge-color);
+  border-right: 1px solid var(--edge-color);
+}
+
+.dec-zone::after {
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid var(--edge-color);
+  border-left: 1px solid var(--edge-color);
+}
+
+@media (width >= 768px) {
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header_title {
+    margin-inline-start: 1px;
+    grid-column: span 2;
+  }
+
+  .title_style {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .record_tag {
+    top: 20px;
+    right: 50px;
+  }
+
+  .header__theme-menu {
+    grid-column: 2;
+    margin-inline-end: 20px;
+    margin-block-start: 18px;
+  }
+
+  .header_content {
+    grid-column: 2;
+    justify-items: start;
+    margin-inline-start: 0px;
+    margin-inline-end: 20px;
+    margin-block-end: 17px;
+}
+  .main{
+    gap: 80px;
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+    margin-block-start: 60px;
+    margin-block-end: 60px;
+  }
+  .main_article_why {
+   grid-template-columns: 1fr 2fr;
+   gap: 20px;
+  }
+
+  .main_article_what {
+    grid-template-columns: repeat(3, 1fr);
+    
+  }
+
+  .main_article_what .container-for-article {
+    grid-column:  1 / 4;
+  }
+
+  .main_article_how {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .main_article-gallery {
+    gap: 20px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    
+  }
+
+  .gallery-item:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .gallery-item:nth-child(2) {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  .gallery-item:nth-child(3) {
+    grid-column: 1; 
+    grid-row: span 2;
+  }
+
+  .gallery-item:nth-child(4) {
+    grid-column: 2 / span 1;
+  }
+
+  .gallery-item:nth-child(5) {
+    grid-column: 2 / span 3;
+  }
+
+  .footer {
+    min-height: 1024px;
+  }
+
+  .footer_title {
+    margin-block-start: 20px;
+
+  }
+
+  .dec-zone::before {
+    top: 27px;
+    right: 20px;
+  }
+
+  .dec-zone::after {
+    bottom: 15px;
+    left: 20px;
+  }
+
+}
+
+/*-------------------*/
+
+@media (width >= 1024px) {
+
+  .title_style {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__theme-menu {
+    grid-column: span 2;
+    justify-self: center;
+    align-self: start;
+    margin-inline-end: 0px;
+    margin-block-start: 19px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  list-style: none;
+}
+
+.header_content { 
+  margin-inline-start: 0px;
+  margin-inline-end: 20px;
+  margin-block-end: 20px;
+}
+
+.main_article_why {
+  gap: 10px
+}
+
+.main_article_what .container-for-article {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.main_article_how {
+  gap: 10px;
+}
+
+.footer {
+  min-height: 768px;
+}
+
 }

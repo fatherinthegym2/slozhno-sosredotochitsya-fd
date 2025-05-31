@@ -2,3 +2,30 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root{
+  --rec-thumbler: block;
+
+  --font_text-size: 18px;
+  --font_text-high-weight: 700;
+  --font_text-small-weight: 400;
+  --font_text-line-height: 23.4px;
+  --text_letter-spacing:  0%;
+  --edge-color: #FF0070;
+  --rec-thumbler: block;
+  --page_background-color: #000028;
+  --accent-color: #FF0070;
+  --bg-picture: url("/images/cover-image-dark.png");
+  --text-color: #FF0070;
+  --border-color: #FF0070;
+  --hover-color: rgba(255, 0, 112, 0.4);
+  --title-color: #DB00FF;
+  --title-shadow-color: #FF0070;
+  --article-background-color: #FF0070;
+  --article-text-color: #000028;
+  --card_title-color: #FF0070;
+  --card_background-article-title: #FF0070;
+  --card_article-title-color: #000028;
+  --card_text-color: #F1B2CE;
+  --link-text-color: #F1B2CE;
+  --link-underline-color: #FF0070;
+}
