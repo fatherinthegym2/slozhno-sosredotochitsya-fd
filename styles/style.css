@@ -180,12 +180,6 @@
 
 }
 
-/*.main_article-side-title {
-  font-weight: var(--font_text-high-weight);
-  background-color: var(--main_background-article-title);
-  color: var(--main_article-title-color);
-}*/
-
 .main_article-title {
   background-color: var(--main_background-article-title);
   color: var(--main_article-title-color);
