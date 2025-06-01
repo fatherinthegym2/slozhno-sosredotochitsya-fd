@@ -14,7 +14,7 @@
   --rec-thumbler: block;
   --page_background-color: #000028;
   --accent-color: #FF0070;
-  --bg-picture: url("/images/cover-image-dark.png");
+  --bg-picture: url('../images/cover-image-dark.png');
   --text-color: #FF0070;
   --border-color: #FF0070;
   --hover-color: rgba(255, 0, 112, 0.4);
