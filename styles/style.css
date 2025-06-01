@@ -2,14 +2,16 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  font-family: 'IBM Plex Mono', 'sans-serif';
+  font-family: 'IBM Plex Mono', sans-serif;
   height: 100%;
   width: 100%;
   max-width: 1024px;
   background-color: var(--page_background-color);
   background-image: var(--bg-picture);
+  background-position: center;
   object-fit: contain;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .header{
@@ -107,11 +109,11 @@
 
 .header__theme-menu-button:focus {
   outline: none;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(currentColor);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--border-color);
+  border: 1px solid var(currentColor);
   pointer-events: none;
 }
 
@@ -181,8 +183,8 @@
 }
 
 .main_article-title {
-  background-color: var(--main_background-article-title);
-  color: var(--main_article-title-color);
+  background-color: var(--card_background-article-title);
+  color: var(--article-text-color);
   font-weight: var(--font_text-high-weight);
 
 }
@@ -204,16 +206,16 @@
 }
 
 .main_article-text a:hover{
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
 
 .main_article-text a:focus{
   outline: none;
-  border: 1px solid var(--hover-color);
+  border: 1px solid currentColor;
 }
 
 .main_article-text a:focus-visible{
-  border: 1px solid var(--hover-color);
+  border: 1px solid currentColor;
 }
 
 .main_article_what {
@@ -253,29 +255,6 @@
   min-height: 668px;
   height: 100vh;
   text-shadow: 2px 2px 0 var(--title-shadow-color);
-}
-
-
-.dec-zone::before,
-.dec-zone::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-}
-
-.dec-zone::before {
-  top: 10px;
-  right: 10px;
-  border-top: 1px solid var(--edge-color);
-  border-right: 1px solid var(--edge-color);
-}
-
-.dec-zone::after {
-  bottom: 10px;
-  left: 10px;
-  border-bottom: 1px solid var(--edge-color);
-  border-left: 1px solid var(--edge-color);
 }
 
 @media (width >= 768px) {
@@ -334,7 +313,6 @@
 
   .main_article_what {
     grid-template-columns: repeat(3, 1fr);
-    
   }
 
   .main_article_what .container-for-article {
@@ -351,54 +329,53 @@
 
   .gallery {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        'sunset sunset ice-cream'
+        'tape books ice-cream'
+        'tape street street';
     gap: 20px;
     
   }
 
   .gallery-item:nth-child(1) {
-    grid-column: span 2;
+    grid-area: sunset;
   }
 
   .gallery-item:nth-child(2) {
-    grid-column: 3 / span 2;
-    grid-row: 1 / span 2;
+    grid-area: ice-cream;
+    object-fit: cover;
+    height: 100%;
   }
 
   .gallery-item:nth-child(3) {
-    grid-column: 1; 
-    grid-row: span 2;
+    grid-area: tape;
+    object-fit: cover;
+    height: 100%;
   }
 
   .gallery-item:nth-child(4) {
-    grid-column: 2 / span 1;
+    grid-area: books;
   }
 
   .gallery-item:nth-child(5) {
-    grid-column: 2 / span 3;
+    grid-area: street;
   }
 
   .footer {
     min-height: 1024px;
   }
 
-  .footer_title {
-    margin-block-start: 20px;
-
-  }
-
-  .dec-zone::before {
-    top: 27px;
+  .decorated-zone::before {
+    top: 20px;
     right: 20px;
   }
 
-  .dec-zone::after {
-    bottom: 15px;
+  .decorated-zone::after {
+    bottom: 20px;
     left: 20px;
   }
 
 }
-
-/*-------------------*/
 
 @media (width >= 1024px) {
 
@@ -412,35 +389,36 @@
     align-self: start;
     margin-inline-end: 0px;
     margin-block-start: 19px;
-}
+  }
 
-.header__theme-menu-list {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  list-style: none;
-}
 
-.header_content { 
-  margin-inline-start: 0px;
-  margin-inline-end: 20px;
-  margin-block-end: 20px;
-}
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+  }
 
-.main_article_why {
-  gap: 10px
-}
+  .header_content { 
+    margin-inline-start: 0px;
+    margin-inline-end: 20px;
+    margin-block-end: 20px;
+  }
 
-.main_article_what .container-for-article {
-  grid-template-columns: repeat(3, 1fr);
-}
+  .main_article_why {
+    gap: 10px
+  }
 
-.main_article_how {
-  gap: 10px;
-}
+  .main_article_what .container-for-article {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-.footer {
-  min-height: 768px;
-}
+  .main_article_how {
+    gap: 10px;
+  }
+
+  .footer {
+    min-height: 768px;
+  }
 
 }
