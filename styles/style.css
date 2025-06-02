@@ -8,6 +8,7 @@
   max-width: 1024px;
   background-color: var(--page_background-color);
   background-image: var(--bg-picture);
+  background-size: cover;
   background-position: center;
   object-fit: contain;
   background-repeat: no-repeat;
@@ -21,6 +22,8 @@
   block-size: 100vh;
   min-height: 668px;
 }
+
+
 
 .decorated-zone::before {
   top: 10px;
@@ -109,13 +112,15 @@
 
 .header__theme-menu-button:focus {
   outline: none;
-  border-bottom: 1px solid var(currentColor);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(currentColor);
+  outline: 1px solid var(--border-color);
   pointer-events: none;
 }
+
+
 
 .header_title {
   justify-self: flex-start;
@@ -206,16 +211,15 @@
 }
 
 .main_article-text a:hover{
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid var(--title-shadow-color); 
 }
 
 .main_article-text a:focus{
   outline: none;
-  border: 1px solid currentColor;
 }
 
 .main_article-text a:focus-visible{
-  border: 1px solid currentColor;
+  outline: 1px solid var(--hover-color);
 }
 
 .main_article_what {
