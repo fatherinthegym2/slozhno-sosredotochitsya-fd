@@ -219,7 +219,7 @@
 }
 
 .main_article-text a:focus-visible{
-  outline: 1px solid var(--hover-color);
+  outline: 1px solid var(--card_text-color);
 }
 
 .main_article_what {
