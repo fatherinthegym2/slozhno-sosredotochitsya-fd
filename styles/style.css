@@ -211,7 +211,7 @@
 }
 
 .main_article-text a:hover{
-  border-bottom: 1px solid var(--title-shadow-color); 
+  border-bottom: 1px solid var(--card_text-color); 
 }
 
 .main_article-text a:focus{

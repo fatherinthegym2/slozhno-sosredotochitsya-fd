@@ -16,7 +16,7 @@
   --bg-picture: url("../images/cover-image-dark.png");
   --text-color: #FF0070;
   --border-color: #FF0070;
-  --hover-color: rgba(255, 0, 112, 0.4);
+  --hover-color: #FF007066;
   --title-color: #DB00FF;
   --title-shadow-color: #FF0070;
   --article-background-color: #FF0070;
@@ -25,8 +25,6 @@
   --card_background-article-title: #FF0070;
   --card_article-title-color: #000028;
   --card_text-color: #F1B2CE;
-  --link-text-color: #F1B2CE;
-  --link-underline-color: #FF0070;
 }
 
 .theme-dark .page {

@@ -4,7 +4,6 @@
 */
 :root{
   --rec-thumbler: block;
-
   --font_text-size: 18px;
   --font_text-high-weight: 700;
   --font_text-small-weight: 400;
@@ -26,6 +25,4 @@
   --card_background-article-title: #FF0070;
   --card_article-title-color: #000028;
   --card_text-color: #F1B2CE;
-  --link-text-color: #F1B2CE;
-  --link-underline-color: #FF0070;
 }
